@@ -1,5 +1,7 @@
+import net.salesianos.utilidades.*;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        System.out.println(GeneradorEstatico.getRandomProducto());
     }
 }
