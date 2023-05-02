@@ -20,4 +20,17 @@ public class Cajero {
     public void atenderCliente() {
         this.colaClientes.remove();
     }
+
+    @Override
+    public String toString() {
+        String msg = "=================================================\n";
+        msg += "*Número de caja: " + this.numeroDeCaja + "\n";
+        msg += "*Total de clientes: " + this.colaClientes.size() + "\n";
+        msg += "*Clientes en la fila: \n";
+        for(int i = 0; i < colaClientes.size(); i++) {
+            msg += "<" + colaClientes.poll() + ">" + "\n";
+        }
+        msg += "=================================================";
+        return msg;
+    }
 }

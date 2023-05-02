@@ -19,4 +19,17 @@ public class Cliente {
     public void anyadirProducto() {
         cestaDeLaCompra.push(GeneradorEstatico.getRandomProducto());
     }
+
+    @Override
+    public String toString() {
+        String msg = "=================================================\n";
+        msg += "*Nombre: " + this.nombre + "\n";
+        msg += "*Total de productos: " + this.cestaDeLaCompra.size() + "\n";
+        msg += "*Lista de artículos en la cesta: \n";
+        for(int i = 0; i < cestaDeLaCompra.size(); i++) {
+            msg += cestaDeLaCompra.get(i) + "\n";
+        }
+        msg += "=================================================";
+        return msg;
+    }
 }
