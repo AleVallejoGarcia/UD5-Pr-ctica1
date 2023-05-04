@@ -27,17 +27,6 @@ public class Cajero {
        }
    }
 
-   public void desplegarClientes() {
-       if (this.colaClientes.isEmpty() == false) {
-           System.out.println("El cajero con id " + this.numeroDeCaja);
-           for(int i = 0; i < colaClientes.size(); i++) {
-               System.out.println(colaClientes.poll());
-           }
-       } else {
-           System.out.println("No hay clientes");
-       }
-   }
-
    @Override
    public String toString() {
        String msg = "=================================================\n";
