@@ -6,7 +6,8 @@ public class Cliente {
     Stack<String> cestaDeLaCompra;
     private String nombre;
 
-    public Cliente(int numeroProductos) {
+    public Cliente() {
+        int numeroProductos = (int)(Math.random()*13+1);
         cestaDeLaCompra = new Stack<String>();
         for (int i = 0; i < numeroProductos; i++) {
             String producto = GeneradorEstatico.getRandomProducto();
