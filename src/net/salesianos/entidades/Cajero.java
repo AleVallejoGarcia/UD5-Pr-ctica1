@@ -2,7 +2,6 @@ package net.salesianos.entidades;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import net.salesianos.entidades.Cliente;
 
 public class Cajero {
    private int numeroDeCaja;
