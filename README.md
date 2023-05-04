@@ -1,18 +1,26 @@
-## Getting Started
+# Hiperdino
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+![logo hiperdino](./images/logodino.jpg)
 
-## Folder Structure
+## Manual de usuario
 
-The workspace contains two folders by default, where:
+Si desea acceder a un manual para el uso de la aplicación pulse [aquí](./docs/MANUALDEUSUARIO.md)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Descripción de las clases
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Si quiere acceder a una descripción de las clases del proyecto pulse [aquí](docs/DESCRIPCIONDECLASES.md)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Estructura de paquetes
 
-## Dependency Management
+La estructura de paquetes es la siguiente:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+- `src`: Dentro tiene todos las clases del proyecto.
+- `net`: Dominio .
+- `salesianos`: Organización
+- `entidades`: Paquete que contiene las clases Cajero y Cliente.
+- `utilidades`: Paquete que contiene la clase GeneradorEstatico.
+- `docs`: Contiene el manual de usuario y la descripción de las clases.
+- `images`: Contiene las imágenes usadas en los documentos
+
+![logo salesianos la cuesta](./images/salesianoslacuesta.png)
