@@ -5,32 +5,50 @@ import java.util.Queue;
 import net.salesianos.entidades.Cliente;
 
 public class Cajero {
-    private int numeroDeCaja;
-    Queue<Cliente> colaClientes;
+   private int numeroDeCaja;
+   Queue<Cliente> colaClientes = new LinkedList<>();
 
-    public Cajero(int numeroDeCaja) {
-        this.numeroDeCaja = numeroDeCaja;
-        colaClientes = new LinkedList<Cliente>();
-    }
+   public Cajero(int numeroDeCaja) {
+       this.numeroDeCaja = numeroDeCaja;
+   }
 
-    public void anyadirClienteALaCola(Cliente cliente) {
-        this.colaClientes.add(cliente);
-    }
+   public int getNumeroDeCaja() { return this.numeroDeCaja; }
 
-    public void atenderCliente() {
-        this.colaClientes.remove();
-    }
+   public void anyadirClienteALaCola() {
+       Cliente clienteAnyadido = new Cliente();
+       System.out.println(clienteAnyadido);
+       this.colaClientes.add(clienteAnyadido);
+   }
 
-    @Override
-    public String toString() {
-        String msg = "=================================================\n";
-        msg += "*Número de caja: " + this.numeroDeCaja + "\n";
-        msg += "*Total de clientes: " + this.colaClientes.size() + "\n";
-        msg += "*Clientes en la fila: \n";
-        for(int i = 0; i < colaClientes.size(); i++) {
-            msg += "<" + colaClientes.poll() + ">" + "\n";
-        }
-        msg += "=================================================";
-        return msg;
-    }
+   public void atenderCliente() {
+       if (this.colaClientes.isEmpty() == false) {
+           System.out.println(this.colaClientes.remove());
+       } else {
+           System.out.println("No hay clientes en la cola");
+       }
+   }
+
+   public void desplegarClientes() {
+       if (this.colaClientes.isEmpty() == false) {
+           System.out.println("El cajero con id " + this.numeroDeCaja);
+           for(int i = 0; i < colaClientes.size(); i++) {
+               System.out.println(colaClientes.poll());
+           }
+       } else {
+           System.out.println("No hay clientes");
+       }
+   }
+
+   @Override
+   public String toString() {
+       String msg = "=================================================\n";
+       msg += "*Número de caja: " + this.numeroDeCaja + "\n";
+       msg += "*Total de clientes: " + this.colaClientes.size() + "\n";
+       msg += "*Clientes en la fila: \n";
+       for(Cliente cliente : colaClientes) {
+           msg += "<" + cliente + ">" + "\n";
+       }
+       msg += "=================================================";
+       return msg;
+   }
 }
